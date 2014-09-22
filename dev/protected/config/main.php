@@ -37,7 +37,7 @@ return array(
 		'bootstrap.widgets.*',
 	),
 	'modules' => array(
-		// gii/default/index
+        'redemption',
 		'gii' => array(
 			'class' => 'system.gii.GiiModule',
 			'generatorPaths' => array(

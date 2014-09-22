@@ -1,12 +1,12 @@
 <?php
 
-class SiteController extends Controller
-{
+class IndexController extends GxController {
     /**
      * This is the action to handle external exceptions.
      */
     public function actionError()
     {
+        var_dump('hahahah');
         $error = Yii::app()->errorHandler->error;
         if($error)
         {
@@ -21,19 +21,20 @@ class SiteController extends Controller
         }
     }
 
-	/**
-	 * This is the default 'index' action that is invoked
-	 * when an action is not explicitly requested by users.
-	 */
-	public function actionIndex() {
-        if (Yii::app()->user->isGuest) {
+    /**
+     * This is the default 'index' action that is invoked
+     * when an action is not explicitly requested by users.
+     */
+    public function actionIndex() {
+ /*       if (Yii::app()->user->isGuest) {
             $this->redirect('/login/');
-        }
-        $model = new News();
-        $this->pageTitle = Yii::t('app', 'Welcome');
-
-		$this->render('/news/view', array('model'=>$model));
-	}
+        }*/
+        //$model = new News('search');
+        $model = new stdClass();
+        //$this->pageTitle = Yii::t('app', 'Welcome');
+        //var_dump($model);die;
+        $this->render('index', array('model' => $model));
+    }
 
 
     public function actionLogin() {
@@ -58,6 +59,7 @@ class SiteController extends Controller
 
     public function actionLogout()
     {
+        die('2');;
         Yii::app()->user->logout();
         $this->redirect(Yii::app()->homeUrl);
     }

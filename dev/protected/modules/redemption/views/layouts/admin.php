@@ -60,13 +60,13 @@
 
                     <div class="collapse navbar-collapse" id="responsive-menu">
                         <ul class="nav navbar-nav">
-                            <li><a href="/">Главное</a></li>
-                            <li><a href="/news">Статьи</a></li>
-                            <li><a href="/category">Рубрики</a></li>
-                            <?php if(Yii::app()->user->isAdmin == 1): ?><li><a href="/editions">Выпуски</a></li><?php endif ?>
-                            <li><a href="/newsComments">Комментарии <span id="countNewComment" style="color: red"></span></a></li>
-                            <li><a href="/newsRating">Рейтинг статей</a></li>
-                            <?php if(Yii::app()->user->isAdmin == 1): ?><li><a href="/users">Пользователи</a></li><?php endif ?>
+                            <li><a href="">Главное</a></li>
+                            <li><a href="news">Статьи</a></li>
+                            <li><a href="category">Рубрики</a></li>
+                            <?php if(Yii::app()->user->isAdmin == 1): ?><li><a href="editions">Выпуски</a></li><?php endif ?>
+                            <li><a href="newsComments">Комментарии <span id="countNewComment" style="color: red"></span></a></li>
+                            <li><a href="newsRating">Рейтинг статей</a></li>
+                            <?php if(Yii::app()->user->isAdmin == 1): ?><li><a href="users">Пользователи</a></li><?php endif ?>
 
                             <li class="dropdown">
                                 <a class="dropdown-toggle" data-toggle="dropdown" href="#">Аналитика <b class="caret"></b></a>
@@ -76,7 +76,7 @@
 
 
                             <li class="" style="margin-left: 100px"><a href="#"><?=Yii::app()->user->username ?></a></li>
-                            <li class=""><a href="/logout">Выйти</a></li>
+                            <li class=""><a href="logout">Выйти</a></li>
                         </ul>
                     </div>
                 </div>
