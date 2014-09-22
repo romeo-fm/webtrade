@@ -25,13 +25,11 @@ class RedemptionModule extends CWebModule {
                 ),*/
             )
         );
-        //Yii::app()->user->setStateKeyPrefix('_admin');
-
+        /*Yii::app()->user->setStateKeyPrefix('_admin');
         $this->setImport(array(
             'redemption.models.*',
-            //'application.models.*',
             'redemption.components.*',
-        ));
+        ));*/
 	}
 
 	public function beforeControllerAction($controller, $action) {

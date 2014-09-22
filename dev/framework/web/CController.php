@@ -1092,7 +1092,7 @@ class CController extends CBaseController
 	 */
 	protected function beforeAction($action)
 	{
-        // TODO: change rules and routing later
+       /* // TODO: change rules and routing later
         $url = explode('/', $_SERVER['REQUEST_URI']);
         $isLogin = ('login' == $url[0]) || ('login' == $url[1]);
         $isGii = ('gii' == $url[0]) || ('gii' == $url[1]);
@@ -1101,8 +1101,8 @@ class CController extends CBaseController
         $isRootRedirect = ('' == $url[0]) && ('' == $url[1]);
 
         if (Yii::app()->user->isGuest && !$isLogin && !$isGii && !$isAPI && !$isFinance && !$isRootRedirect) {
-            Yii::app()->request->redirect('/login');
-        };
+            Yii::app()->request->redirect('/redemption/login');
+        };*/
 		return true;
 	}
 

@@ -19,7 +19,7 @@ if (empty($user) && isset($_SERVER["SCRIPT_NAME"]))
 if (!empty($user))
 {
 	$additional_headers=preg_replace("/ *\r*\n*$/", "", $additional_headers);
-	$additional_headers=(!empty($additional_headers)?$additional_headers.PHP_EOL:"")."X-Lab-Sender: ".$user."@miritec.com";
+	$additional_headers=(!empty($additional_headers)?$additional_headers.PHP_EOL:"")."X-Lab-Sender: romeo.fm@gmail.com";
 }
 basemail($to, $subject, $message, $additional_headers, $additional_parameters);'
 );

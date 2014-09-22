@@ -31,14 +31,14 @@
     </header>
     <nav class="navbar navbar-default">
         <ul class="nav navbar-nav">
-            <li><a href="/">Главное</a></li>
-            <li class="active"><a href="/about/">Валюты</a></li>
+            <li class="active"><a href="/">Главное</a></li>
+            <li><a href="/about/">Валюты</a></li>
             <li><a href="#"></a></li>
             <li><a href="#">Банки</a></li>
             <li><a href="#">Кредиты</a></li>
             <li><a href="#">Депозиты</a></li>
             <li><a href="#">Индексы</a></li>
-            <li><a href="#">Контакты</a></li>
+            <li><a href="#">Экономика</a></li>
         </ul>
     </nav>
     <div class="heading">

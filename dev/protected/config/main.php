@@ -54,7 +54,7 @@ return array(
 			// enable cookie-based authentication
             'class' => 'CWebUser',
 			'allowAutoLogin' => true,
-			'loginUrl' => array('/site/login'),
+			'loginUrl' => array('/redemption/login'),
 		),
         'image' => array(
             'class' => 'ext.image.CImageComponent',
@@ -79,10 +79,10 @@ return array(
 
                 // Other patterns
                 'gii'=>'gii',
-				//'' => 'news/',
 				'' => 'finance/',
-				'login' => 'site/login',
-				'logout' => 'site/logout',
+				'redemption' => '/redemption/index/login',
+				'redemption/login' => '/redemption/index/login',
+				'redemption/logout' => '/redemption/index/logout',
 				'<controller:\w+>' => '<controller>/index',
 				'<controller:\w+>/<id:\d+>' => '<controller>/view',
 				'<controller:\w+>/<action:\w+>/<id:\d+>' => '<controller>/<action>',
