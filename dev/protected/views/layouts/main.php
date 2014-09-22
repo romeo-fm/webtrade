@@ -60,6 +60,7 @@
 
                     <div class="collapse navbar-collapse" id="responsive-menu">
                         <ul class="nav navbar-nav">
+                            <li><a href="/">Главное</a></li>
                             <li><a href="/news">Статьи</a></li>
                             <li><a href="/category">Рубрики</a></li>
                             <?php if(Yii::app()->user->isAdmin == 1): ?><li><a href="/editions">Выпуски</a></li><?php endif ?>

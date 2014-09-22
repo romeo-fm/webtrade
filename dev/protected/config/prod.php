@@ -5,6 +5,18 @@ return CMap::mergeArray(
     array(
         'components' => array(
             'db' => array(
+                'connectionString' => 'mysql:host=romeofm.mysql.ukraine.com.ua;dbname=romeofm_webfin',
+                'emulatePrepare' => true,
+                'username' => 'romeofm_webfin',
+                'password' => 'vk7v8mks',
+                'charset' => 'utf8',
+                'enableProfiling' => YII_DEBUG,
+                'enableParamLogging' => YII_DEBUG,
+                'schemaCachingDuration' => YII_DEBUG ? 0 : 3600
+            ),
+        )
+        /*'components' => array( // config to other db
+            'db' => array(
                 'connectionString' => 'mysql:host=romeofm.mysql.ukraine.com.ua;dbname=romeofm_webfinyi',
                 'emulatePrepare' => true,
                 'username' => 'romeofm_webfinyi',
@@ -14,6 +26,6 @@ return CMap::mergeArray(
                 'enableParamLogging' => YII_DEBUG,
                 'schemaCachingDuration' => YII_DEBUG ? 0 : 3600
             ),
-        )
+        )*/
     )
 );
