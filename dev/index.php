@@ -1,5 +1,4 @@
 <?php
-
 include_once(__DIR__.'/lab.mail.fix.php');
 
 // change the following paths if necessary
@@ -14,10 +13,12 @@ if ($ws == 'lab') {
 	// specify how many levels of call stack should be shown in each log message
 	defined('YII_TRACE_LEVEL') or define('YII_TRACE_LEVEL',3);
 }
-else
-{
-	define('YII_DEBUG',false);
+else { // TODO: change:
+    error_reporting(E_ALL);
+    ini_set('display_errors', '1');
+	define('YII_DEBUG', true); // TODO: change
 	$config = __DIR__ . '/protected/config/prod.php';
+    defined('YII_TRACE_LEVEL') or define('YII_TRACE_LEVEL',3); // TODO: change
 }
 
 require_once($yii);

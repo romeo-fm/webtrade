@@ -7,6 +7,11 @@ class FinanceController extends Controller
 		$this->render('index');
 	}
 
+    public function actionError() {
+        $this->layout = 'finance';
+		$this->render('error');
+	}
+
 	// Uncomment the following methods and override them if needed
 	/*
 	public function filters()

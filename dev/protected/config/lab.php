@@ -1,4 +1,5 @@
 <?php
+die('lab conf deny');
 $mainConfig = PHP_SAPI === 'cli' ? __DIR__ . '/console.php' : __DIR__ . '/main.php';
 error_reporting(E_ALL);
 ini_set('display_errors', '1');

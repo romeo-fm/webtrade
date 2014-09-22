@@ -93,7 +93,7 @@ return array(
         ),
 		'errorHandler' => array(
 			// use 'site/error' action to display errors
-			'errorAction' => 'site/error',
+			'errorAction' => 'finance/error',
 		),
 		'bootstrap' => array(
 			'class' => 'bootstrap.components.BsApi'
