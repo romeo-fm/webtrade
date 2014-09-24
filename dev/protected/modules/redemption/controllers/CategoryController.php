@@ -2,7 +2,6 @@
 
 class CategoryController extends GxController {
 
-
 	public function actionView($id) {
         return;
 		$this->render('view', array(
@@ -21,7 +20,7 @@ class CategoryController extends GxController {
 				if (Yii::app()->getRequest()->getIsAjaxRequest())
 					Yii::app()->end();
 				else
-					$this->redirect('/category?suc=1');
+					$this->redirect('./?suc=1');
 			}
 		}
 

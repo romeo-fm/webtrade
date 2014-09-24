@@ -45,7 +45,7 @@ return array(
 				'bootstrap.gii', // bootstrap generator
 			),
 			'password' => "ghtdtl",
-			'ipFilters' => array('127.0.0.1', '192.168.*', '*.*.*.*'), // TODO: close this
+			'ipFilters' => array(OWNER),
 		),
 	),
 	// application components
@@ -67,7 +67,7 @@ return array(
 			'urlFormat' => 'path',
 			'showScriptName' => false,
 			'rules' => array(
-                // REST patterns
+                // API REST patterns
                 array('api/commentsView', 'pattern' => 'api/comments', 'verb' => 'get'),
                 array('api/commentsCreate', 'pattern' => 'api/comments', 'verb' => 'post'),
                 array('api/newsView', 'pattern' => 'api/news', 'verb' => 'get'),
@@ -79,7 +79,6 @@ return array(
 
                 // Other patterns
                 'gii'=>'gii',
-				'' => 'finance/',
 				'redemption' => '/redemption/index/login',
 				'redemption/login' => '/redemption/index/login',
 				'redemption/logout' => '/redemption/index/logout',
@@ -92,8 +91,7 @@ return array(
             'class' => 'CDummyCache'//YII_DEBUG ? 'CDummyCache' : 'CMemCache'
         ),
 		'errorHandler' => array(
-			// use 'site/error' action to display errors
-			'errorAction' => 'finance/error',
+			'errorAction' => 'index/error',
 		),
 		'bootstrap' => array(
 			'class' => 'bootstrap.components.BsApi'
@@ -105,12 +103,6 @@ return array(
 					'class' => 'CFileLogRoute',
 					'levels' => 'error, warning',
 				),
-				// uncomment the following to show log messages on web pages
-				/*
-				array(
-					'class'=>'CWebLogRoute',
-				),
-				*/
 			),
 		),
 	),

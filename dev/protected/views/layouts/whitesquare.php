@@ -31,28 +31,25 @@
     </header>
     <nav class="navbar navbar-default">
         <ul class="nav navbar-nav">
-            <li class="active"><a href="/">Главное</a></li>
-            <li><a href="/about/">Валюты</a></li>
-            <li><a href="#"></a></li>
-            <li><a href="#">Банки</a></li>
-            <li><a href="#">Кредиты</a></li>
-            <li><a href="#">Депозиты</a></li>
-            <li><a href="#">Индексы</a></li>
-            <li><a href="#">Экономика</a></li>
+          <!--  <li class="active"><a href="/">Главное</a></li>-->
+            <?php
+            foreach ($this->menu as $key => $val) {
+                echo  "\n<li class='" . ($key == $_SERVER['REQUEST_URI'] ? 'active' : '') ."'><a href='" . $key . "'> " . $val . "</a></li>";
+            }
+            ?>
         </ul>
     </nav>
     <div class="heading">
-        <h1>About us</h1>
+        <h1>Главное</h1>
     </div>
     <div class="row">
         <aside class="col-md-7">
             <ul class="list-group submenu">
-                <li class="list-group-item active">Lorem ipsum</li>
-                <li class="list-group-item"><a href="/">Donec tincidunt laoreet</a></li>
-                <li class="list-group-item"><a href="/vestibulum/">Vestibulum elit</a></li>
-                <li class="list-group-item"><a href="/etiam/">Etiam pharetra</a></li>
-                <li class="list-group-item"><a href="/phasellus/">Phasellus placerat</a></li>
-                <li class="list-group-item"><a href="/cras/">Cras et nisi vitae odio</a></li>
+                <?php
+                    foreach ($this->cats as $cat) {
+                        echo "\n<li class=\"list-group-item\"><a href='/c" . $cat['intCategoryID'] ."'>" . $cat['varTitle'] . "</a></li>";
+                    }
+                ?>
             </ul>
             <div class="panel panel-primary">
                 <div class="panel-heading">Рекламная пауза:</div>

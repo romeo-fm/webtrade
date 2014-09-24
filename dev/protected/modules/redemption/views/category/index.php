@@ -1,7 +1,7 @@
 <?php
 
 $this->breadcrumbs = array(
-    $model->label(2) => array('index'),
+    $model->label(2) => array('./category'),
 );
 
 
@@ -31,7 +31,7 @@ $(document).ready(function(){
 
         <div>
             <div class="form-group" style="float: right; padding: 0 15px">
-                <a href="/category/create" class="btn btn-sm btn-primary"><span class="glyphicon glyphicon-file"></span>Создать новую рубрику</a>
+                <a href="./create" class="btn btn-sm btn-primary"><span class="glyphicon glyphicon-file"></span>Создать новую рубрику</a>
             </div><!-- form -->
         </div>
     </div>

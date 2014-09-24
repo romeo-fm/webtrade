@@ -23,7 +23,7 @@ return CMap::mergeArray(
                     array(
                         'class' => 'ext.yii-debug-toolbar.YiiDebugToolbarRoute',
                         'enabled' => YII_DEBUG,
-                        'ipFilters' => array('127.0.0.1', '192.168.*', '62.205.148.104'),
+                        'ipFilters' => array('127.0.0.1', '192.168.*', OWNER),
                     ),
                     array(
                         'class'=>'CFileLogRoute',
