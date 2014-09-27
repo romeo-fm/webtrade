@@ -24,6 +24,10 @@ class IndexController extends Controller {
     public function init() {
         $this->cats = Category::model()->findAll("isActive = 1");
         if (ISOWNER) {
+           /* Yii::import('application.commands.*');
+            $command = new FeedCommand("test", "test");
+            $command->run(null);
+             die;*/
             //var_dump($_SERVER['REQUEST_URI']);die;
         }
     }
