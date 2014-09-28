@@ -41,7 +41,7 @@ abstract class BaseNews extends GxActiveRecord {
 
 	public function rules() {
 		return array(
-			array('varText, varTitle, varTizer, varMailText, intCategoryID', 'required'),
+			array('varText, varTitle, intCategoryID', 'required'),
 			array('isFree, isPublic', 'numerical', 'integerOnly'=>true),
 			array('varTitle, varTizer', 'length', 'max'=>255),
 			array('intCategoryID', 'length', 'max'=>10),

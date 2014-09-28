@@ -13,6 +13,9 @@ return
         'import'=>array(
             'application.components.*',
             'application.models.*',
+            'ext.giix-components.*',
+            'ext.galleryManager.models.*',
+            'ext.SoftDelete.SoftDeleteBehavior',
         ),
 
         'components'=>array(
