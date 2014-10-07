@@ -12,7 +12,8 @@ return array(
         'gallery' => 'ext.galleryManager.GalleryController',
     ),
 	'theme' => 'default',
-	'homeUrl' => array('/site/index'),
+	'defaultController' => 'index',
+	'homeUrl' => array('/index'),
 	// preloading 'log' component
 	'preload' => array('log'),
 	'sourceLanguage'=>'00',
@@ -45,7 +46,7 @@ return array(
 				'bootstrap.gii', // bootstrap generator
 			),
 			'password' => "ghtdtl",
-			'ipFilters' => array(OWNER),
+			'ipFilters' => $GLOBALS['adminArr'],
 		),
 	),
 	// application components

@@ -18,12 +18,15 @@ class IndexController extends Controller {
 	}
 
     public function actionError() {
+
 		$this->render('error');
 	}
 
     public function init() {
+        parent::init();
+
         $this->cats = Category::model()->findAll("isActive = 1");
-        if (ISOWNER && 1) {
+        if (ISOWNER && 0) {
             /*Yii::import('application.commands.*');
             $command = new FeedCommand("test", "test");
             $command->run(null);*/
